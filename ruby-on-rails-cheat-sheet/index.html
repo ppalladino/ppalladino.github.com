@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Use RoR Cheat Sheet for dynamic title -->
+    <title>Paul Palladino</title>
+    <!-- Twitter bootstrap (via cdn) -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+        <a href="/">
+          <span class="line">NOTEBOOK</span>
+          <span class="line">@author Paul Palladino</span>
+          <span class="line description">@description Notes on software, music and electronics</span>
+        </a>
+      </header>
+      <nav class="row">
+        <a href="/">Subjects</a> <a href="/about">About</a>
+      </nav>
+      <div class='row post'>
+  <h1 class="title">
+    RoR Cheat Sheet
+    <span class="date text-muted">
+      2016-12-09
+    </span>
+  </h1>
+  <div class="content">
+    <p>Notes from <a href="http://guides.rubyonrails.org/getting_started.html" target="_blank" rel="external">guides.rubyonrails.org</a></p>
+<table>
+  <tr>
+    <th colspan="2">Naming Convention</th>
+  </tr>
+  <tr>
+    <td>controllers are plural</td>
+    <td>Ex: <code>Users</code></td>
+  </tr>
+  <tr>
+    <td>models are singular</td>
+    <td>Ex: <code>User</code></td>
+  </tr>
+  <tr>
+    <th colspan="2">Debugging</th>
+  </tr>
+  <tr>
+    <td>install byebug</td>
+    <td>$ gem install byebug</td>
+  </tr>
+  <tr>
+    <td>set breakpoint by including <code>byebug</code></td>
+    <td><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">def new</div><div class="line">  byebug</div><div class="line">  @person = Person.new</div><div class="line">end</div></pre></td></tr></table></figure>
+
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">General</th>
+  </tr>
+  <tr>
+    <td>start new project</td>
+    <td>$ rails new [PROJECT]</td>
+  </tr>
+  <tr>
+    <td>start dev server</td>
+    <td>$ bin/rails server</td>
+  </tr>
+  <tr>
+    <td rowspan="3">run tests</td>
+    <td>$ bin/rails test</td>
+  </tr>
+  <tr>
+    <td>$ bin/rails test:models</td>
+  </tr>
+  <tr>
+    <td>$ bin/rails test TEST=[PATH TO TEST]</td>
+  </tr>
+  <tr>
+    <td>shows routes</td>
+    <td>$ bin/rails routes</td>
+  </tr>
+  <tr>
+    <th colspan="2">Database</th>
+  </tr>
+  <tr>
+    <td>generate general migration</td>
+    <td>$ bin/rails generate migration name_of_some_migration</td>
+  </tr>
+  <tr>
+    <td>generate migration with auto constructed script</td>
+    <td>$ bin/rails generate migration [DESCRIPTION]<em>to</em>[TABLE] [FIELD]:[TYPE]</td>
+  </tr>
+  <tr>
+    <td>drops and then recreates the database and includes your seeds.rb</td>
+    <td>$ rake db:reset</td>
+  </tr>
+  <tr>
+    <td rowspan="2">execute migrations</td>
+    <td>$ bin/rails db:migrate</td>
+  </tr>
+  <tr>
+    <td>$ bin/rails db:migrate RAILS_ENV=production</td>
+  </tr>
+  <tr>
+    <td>execute seeds</td>
+    <td>$ bin/rails db:seed</td>
+  </tr>
+  <tr>
+    <td>set local environment</td>
+    <td>$ bin/rails server –environment production </td>
+  </tr>
+  <tr>
+    <th colspan="2">Generators</th>
+  </tr>
+  <tr>
+    <td>generate controller</td>
+    <td>$ bin/rails generate controller [CONTROLLER PLURAL]</td>
+  </tr>
+  <tr>
+    <td>generate model</td>
+    <td>$ bin/rails generate model [MODEL SINGULAR] [PROP]:string [PROP]:text</td>
+  </tr>
+  <tr>
+    <th colspan="2">Testing</th>
+  </tr>
+  <tr>
+    <td>generate integration test</td>
+    <td>$ bin/rails generate integration_test [TEST NAME]</td>
+  </tr>
+  <tr>
+    <th colspan="2">Reading</th>
+  </tr>
+  <tr>
+    <td>routes</td>
+    <td><a href="http://guides.rubyonrails.org/routing.html" target="_blank" rel="external">http://guides.rubyonrails.org/routing.html</a></td>
+  </tr>
+  <tr>
+    <td>migrations</td>
+    <td><a href="http://edgeguides.rubyonrails.org/active_record_migrations.html" target="_blank" rel="external">http://edgeguides.rubyonrails.org/active_record_migrations.html</a></td>
+  </tr>
+  <tr>
+    <td>active record associations</td>
+    <td><a href="http://guides.rubyonrails.org/association_basics.html" target="_blank" rel="external">http://guides.rubyonrails.org/association_basics.html</a></td>
+  </tr>
+  <tr>
+    <td>strong params</td>
+    <td><a href="http://weblog.rubyonrails.org/2012/3/21/strong-parameters/" target="_blank" rel="external">http://weblog.rubyonrails.org/2012/3/21/strong-parameters/</a></td>
+  </tr>
+  <tr>
+    <td>validation</td>
+    <td><a href="http://guides.rubyonrails.org/active_record_validations.html" target="_blank" rel="external">http://guides.rubyonrails.org/active_record_validations.html</a></td>
+  </tr>
+  <tr>
+    <td>form helper</td>
+    <td><a href="http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html" target="_blank" rel="external">http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html</a></td>
+  </tr>
+  <tr>
+    <td>layout and rendering</td>
+    <td><a href="http://guides.rubyonrails.org/layouts_and_rendering.html" target="_blank" rel="external">http://guides.rubyonrails.org/layouts_and_rendering.html</a></td>
+  </tr>
+</table>
+
+  </div>
+</div>
+
+     </div>
+  </body>
+</html>

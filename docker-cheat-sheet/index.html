@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Use Docker Cheat Sheet for dynamic title -->
+    <title>Paul Palladino</title>
+    <!-- Twitter bootstrap (via cdn) -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+        <a href="/">
+          <span class="line">NOTEBOOK</span>
+          <span class="line">@author Paul Palladino</span>
+          <span class="line description">@description Notes on software, music and electronics</span>
+        </a>
+      </header>
+      <nav class="row">
+        <a href="/">Subjects</a> <a href="/about">About</a>
+      </nav>
+      <div class='row post'>
+  <h1 class="title">
+    Docker Cheat Sheet
+    <span class="date text-muted">
+      2016-11-26
+    </span>
+  </h1>
+  <div class="content">
+    <h2 id="Common-Commands"><a href="#Common-Commands" class="headerlink" title="Common Commands"></a>Common Commands</h2><p>This is for quick reference. For more details check out the <a href="https://docs.docker.com/engine/reference/commandline/" target="_blank" rel="external">docs</a></p>
+<table>
+  <tr>
+    <th>Command</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>docker attach [CONTAINER]</td>
+    <td>attach to a container via it’s id</td>
+  </tr>
+  <tr>
+    <td>docker exec -it [CONTAINER] /bin/bash</td>
+    <td>connect to running container in bash terminal</td>
+  </tr>
+  <tr>
+    <td>docker start [CONTAINER]</td>
+    <td>starts a container</td>
+  </tr>
+  <tr>
+    <td>docker run -it ubuntu [IMAGE]</td>
+    <td>runs an image with an interactive terminal</td>
+  </tr>
+  <tr>
+    <td>docker stop [CONTAINER]</td>
+    <td>stops a container</td>
+  </tr>
+  <tr>
+    <td>docker ps</td>
+    <td>list running local containers</td>
+  </tr>
+  <tr>
+    <td>docker ps -a</td>
+    <td>list all local containers</td>
+  </tr>
+</table>
+
+  </div>
+</div>
+
+     </div>
+  </body>
+</html>

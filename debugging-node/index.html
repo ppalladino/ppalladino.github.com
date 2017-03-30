@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Use Debugging Node for dynamic title -->
+    <title>Paul Palladino</title>
+    <!-- Twitter bootstrap (via cdn) -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+        <a href="/">
+          <span class="line">NOTEBOOK</span>
+          <span class="line">@author Paul Palladino</span>
+          <span class="line description">@description Notes on software, music and electronics</span>
+        </a>
+      </header>
+      <nav class="row">
+        <a href="/">Subjects</a> <a href="/about">About</a>
+      </nav>
+      <div class='row post'>
+  <h1 class="title">
+    Debugging Node
+    <span class="date text-muted">
+      2016-11-27
+    </span>
+  </h1>
+  <div class="content">
+    <h2 id="Method-1-Using-Chrome-debugger"><a href="#Method-1-Using-Chrome-debugger" class="headerlink" title="Method 1 - Using Chrome debugger"></a>Method 1 - Using Chrome debugger</h2><h3 id="Node-version"><a href="#Node-version" class="headerlink" title="Node version"></a>Node version</h3><p>Make sure node version is greater than 6.0.0
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node --version</div></pre></td></tr></table></figure></p>
+<h3 id="Install-node-inspector"><a href="#Install-node-inspector" class="headerlink" title="Install node-inspector"></a>Install node-inspector</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g node-inspector</div></pre></td></tr></table></figure>
+<h3 id="Start-the-session-and-copy-the-url-into-chrome"><a href="#Start-the-session-and-copy-the-url-into-chrome" class="headerlink" title="Start the session and copy the url into chrome"></a>Start the session and copy the url into chrome</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ node --inspect --debug-brk [APP.JS]  </div><div class="line"></div><div class="line">Warning: This is an experimental feature and could change at any time.</div><div class="line">To start debugging, open the following URL <span class="keyword">in</span> Chrome:</div><div class="line">    chrome-devtools://devtools/remote/serve_file/@60<span class="built_in">cd</span>6e859b9f557d23....</div><div class="line">Server listening on 3000</div><div class="line">Debugger attached.</div></pre></td></tr></table></figure>
+<h2 id="Method-2-Using-Chrome-debugger-broken-as-of-2016-11-29"><a href="#Method-2-Using-Chrome-debugger-broken-as-of-2016-11-29" class="headerlink" title="Method 2 - Using Chrome debugger (broken as of 2016-11-29)"></a>Method 2 - Using Chrome debugger (broken as of 2016-11-29)</h2><h3 id="Install-node-inspector-1"><a href="#Install-node-inspector-1" class="headerlink" title="Install node-inspector"></a>Install node-inspector</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g node-inspector</div></pre></td></tr></table></figure>
+<h3 id="start-the-session"><a href="#start-the-session" class="headerlink" title="start the session"></a>start the session</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// flag pauses at first line</div><div class="line">$ node-debug [APP.JS] --debug-brk</div></pre></td></tr></table></figure>
+<h2 id="Method-3-Use-node-debugger"><a href="#Method-3-Use-node-debugger" class="headerlink" title="Method 3 - Use node debugger"></a>Method 3 - Use node debugger</h2><p>Start the built in node debugger
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node debug [APP.JS]</div></pre></td></tr></table></figure></p>
+<h3 id="Breakpoints"><a href="#Breakpoints" class="headerlink" title="Breakpoints"></a>Breakpoints</h3><p>Add breakpoints by adding debugger statements in code
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// start debugging here</span></div><div class="line"><span class="keyword">debugger</span>;</div></pre></td></tr></table></figure></p>
+<h3 id="Hot-Keys"><a href="#Hot-Keys" class="headerlink" title="Hot Keys"></a>Hot Keys</h3><table>
+  <tr>
+    <td>c</td>
+    <td>continue</td>
+  </tr>
+  <tr>
+    <td>n</td>
+    <td>execute this line and go to next line</td>
+  </tr>
+  <tr>
+    <td>s</td>
+    <td>step into this function</td>
+  </tr>
+  <tr>
+    <td>o</td>
+    <td>finish function execution and step out</td>
+  </tr>
+  <tr>
+    <td>repl</td>
+    <td>allows code to be evaluated remotely</td>
+  </tr>
+</table>
+
+  </div>
+</div>
+
+     </div>
+  </body>
+</html>

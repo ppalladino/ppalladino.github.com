@@ -1,0 +1,272 @@
+html {
+  background-color: #1e2126;
+}
+body {
+  background-color: transparent;
+  color: #aab1be;
+  font-family: 'Oxygen Mono', monospace;
+}
+a,
+a:hover {
+  color: #337ab7;
+  text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #97c378;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  color: #4cadba;
+  font-size: 16px;
+}
+table {
+  width: 100%;
+}
+table tr th {
+  text-align: center;
+  color: #97c378;
+  font-size: 16px;
+}
+table tr td,
+table tr th {
+  border: 1px solid #59606d;
+  padding: 5px;
+}
+.container {
+  background-color: #24272e;
+  border: 1px solid #17191d;
+  padding: 20px 30px;
+}
+header {
+  font-size: 1.5em;
+  color: #c677dd;
+  margin-bottom: 20px;
+}
+header a,
+header a:hover {
+  color: #c677dd;
+  text-decoration: none;
+}
+header .line {
+  display: block;
+}
+header .line:before {
+  content: '//';
+  padding-right: 10px;
+}
+header .description {
+  display: none;
+}
+@media (min-width: 763px) {
+  header .description {
+    display: block;
+  }
+}
+nav a,
+nav a:hover {
+  color: #e06c75;
+  font-size: 1.25em;
+}
+.title .date {
+  font-size: 14px;
+}
+.text-muted {
+  color: #59606d;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+li {
+  padding-top: 10px;
+}
+li a {
+  color: #337ab7;
+  font-size: 1.25em;
+}
+li .date {
+  float: right;
+}
+.top-buffer {
+  margin-top: 20px;
+}
+code {
+  background-color: #2b2f37;
+  border: none;
+  border-radius: 3px;
+  color: #a1a9b7;
+}
+pre {
+  margin: 0;
+}
+figure table {
+  width: 100%;
+}
+figure table td.gutter {
+  display: none;
+}
+figure table td.code {
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+figure table td.code pre {
+  background-color: #2b2f37;
+  border: none;
+  border-radius: 3px;
+  color: #a1a9b7;
+}
+table.guitar-scale {
+  margin-left: 15px;
+  width: auto;
+}
+table.guitar-scale tr td {
+  position: relative;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #aab1be;
+}
+table.guitar-scale tr td:last-child {
+  border: none;
+}
+table.guitar-scale tr td.note:before {
+  background-color: #337ab7;
+  border: none;
+  border-radius: 50%;
+  content: ' ';
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -15px;
+  top: 4px;
+  padding-top: 6px;
+}
+table.guitar-scale tr td.ghost:before {
+  background-color: #444954;
+}
+table.guitar-scale tr td.root:before {
+  background-color: #337ab7;
+  color: #20242a;
+  content: 'R';
+}
+table.guitar-scale tr td.root-muted:before {
+  background-color: #652f33;
+  color: #20242a;
+  content: 'R';
+}
+.color-music-c {
+  background-color: #217ec1;
+  color: #fff;
+}
+.color-music-c.note-label:after {
+  content: "C";
+}
+.color-music-c-sharp {
+  background-color: #334899;
+  color: #fff;
+}
+.color-music-c-sharp.note-label:after {
+  content: "C# / Db";
+}
+.color-music-d {
+  background-color: #392d7b;
+  color: #fff;
+}
+.color-music-d.note-label:after {
+  content: "D";
+}
+.color-music-d-sharp {
+  background-color: #6b267c;
+  color: #fff;
+}
+.color-music-d-sharp.note-label:after {
+  content: "D# / Eb";
+}
+.color-music-e {
+  background-color: #921b3c;
+  color: #fff;
+}
+.color-music-e.note-label:after {
+  content: "E";
+}
+.color-music-f {
+  background-color: #e22028;
+  color: #fff;
+}
+.color-music-f.note-label:after {
+  content: "F";
+}
+.color-music-f-sharp {
+  background-color: #e14326;
+  color: #fff;
+}
+.color-music-f-sharp.note-label:after {
+  content: "F# / Gb";
+}
+.color-music-g {
+  background-color: #ed8522;
+  color: #fff;
+}
+.color-music-g.note-label:after {
+  content: "G";
+}
+.color-music-g-sharp {
+  background-color: #f2af1a;
+  color: #fff;
+}
+.color-music-g-sharp.note-label:after {
+  content: "G# / Ab";
+}
+.color-music-a {
+  background-color: #efe835;
+  color: #fff;
+}
+.color-music-a.note-label:after {
+  content: "A";
+}
+.color-music-a-sharp {
+  background-color: #c2d734;
+  color: #fff;
+}
+.color-music-a-sharp.note-label:after {
+  content: "A# / Bb";
+}
+.color-music-b {
+  background-color: #58a645;
+  color: #fff;
+}
+.color-music-b.note-label:after {
+  content: "B";
+}
+.piano {
+  display: flex;
+}
+.piano div {
+  width: 50px;
+  height: 300px;
+  border: 1px solid #24272e;
+  border-left: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+.piano .mute {
+  background: #444954;
+}
+.piano .sharp {
+  border: 1px solid #24272e;
+  height: 150px;
+  width: 30px;
+  position: relative;
+  top: -1px;
+  left: 35px;
+}

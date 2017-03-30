@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Use RoR ActiveRecord Enums for dynamic title -->
+    <title>Paul Palladino</title>
+    <!-- Twitter bootstrap (via cdn) -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+        <a href="/">
+          <span class="line">NOTEBOOK</span>
+          <span class="line">@author Paul Palladino</span>
+          <span class="line description">@description Notes on software, music and electronics</span>
+        </a>
+      </header>
+      <nav class="row">
+        <a href="/">Subjects</a> <a href="/about">About</a>
+      </nav>
+      <div class='row post'>
+  <h1 class="title">
+    RoR ActiveRecord Enums
+    <span class="date text-muted">
+      2016-12-24
+    </span>
+  </h1>
+  <div class="content">
+    <p>ActiveRecord enums allow records to have simple human readable values which can be easily accessed in select inputs and programatic logic</p>
+<p>Add an <code>integer</code> column to a model
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/rails generate model address state:integer</div></pre></td></tr></table></figure></p>
+<p>Create enum object in [MODEL].rb
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">class Address &lt; ActiveRecord::Base</div><div class="line">  enum state: [:nj, :ny, :pa]</div><div class="line">end</div></pre></td></tr></table></figure></p>
+<p>Values associated to a record will be available via attributes
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ Address.first.state</div><div class="line">=&gt; nj</div></pre></td></tr></table></figure></p>
+<p>Query for values
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ Address.nj</div><div class="line">=&gt; [SELECTS ADDRESSES FROM NJ]</div></pre></td></tr></table></figure></p>
+<p>Use in select inputs
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;field&quot;&gt;</div><div class="line">  &lt;%= f.label :state %&gt;&lt;br&gt;</div><div class="line">  &lt;%= f.select :state, Address.states.keys %&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+
+  </div>
+</div>
+
+     </div>
+  </body>
+</html>
