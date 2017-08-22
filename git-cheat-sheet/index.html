@@ -37,6 +37,13 @@
     <th colspan="2">Logging</th>
   </tr>
   <tr>
+    <td>Force a date and creates a tag</td>
+    <td>
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git GIT_COMMITTER_DATE=&quot;Tue, 22 Aug 2017 09:11:39 -0400&quot; git tag -a &lt;some tag&gt; -m&quot;&lt;some tag&gt;&quot;</div></pre></td></tr></table></figure>
+
+    </td>
+  </tr>
+  <tr>
     <td>List merges since some tag and current branch head</td>
     <td>
       <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git log &lt;some tag&gt;..HEAD --oneline --merges</div></pre></td></tr></table></figure>

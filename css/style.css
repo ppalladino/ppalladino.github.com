@@ -166,48 +166,55 @@ table.guitar-scale tr td.root-muted:before {
 }
 .color-music-c {
   background-color: #217ec1;
+  fill: #217ec1;
   color: #fff;
 }
 .color-music-c.note-label:after {
   content: "C";
 }
 .color-music-c-sharp {
-  background-color: #334899;
+  background-color: #2242bb;
+  fill: #2242bb;
   color: #fff;
 }
 .color-music-c-sharp.note-label:after {
   content: "C# / Db";
 }
 .color-music-d {
-  background-color: #392d7b;
+  background-color: #6b267c;
+  fill: #6b267c;
   color: #fff;
 }
 .color-music-d.note-label:after {
   content: "D";
 }
 .color-music-d-sharp {
-  background-color: #6b267c;
+  background-color: #392d7b;
+  fill: #392d7b;
   color: #fff;
 }
 .color-music-d-sharp.note-label:after {
   content: "D# / Eb";
 }
 .color-music-e {
-  background-color: #921b3c;
+  background-color: #272727;
+  fill: #272727;
   color: #fff;
 }
 .color-music-e.note-label:after {
   content: "E";
 }
 .color-music-f {
-  background-color: #e22028;
+  background-color: #795231;
+  fill: #795231;
   color: #fff;
 }
 .color-music-f.note-label:after {
   content: "F";
 }
 .color-music-f-sharp {
-  background-color: #e14326;
+  background-color: #512a09;
+  fill: #512a09;
   color: #fff;
 }
 .color-music-f-sharp.note-label:after {
@@ -215,13 +222,15 @@ table.guitar-scale tr td.root-muted:before {
 }
 .color-music-g {
   background-color: #ed8522;
+  fill: #ed8522;
   color: #fff;
 }
 .color-music-g.note-label:after {
   content: "G";
 }
 .color-music-g-sharp {
-  background-color: #f2af1a;
+  background-color: #e14326;
+  fill: #e14326;
   color: #fff;
 }
 .color-music-g-sharp.note-label:after {
@@ -229,6 +238,7 @@ table.guitar-scale tr td.root-muted:before {
 }
 .color-music-a {
   background-color: #efe835;
+  fill: #efe835;
   color: #fff;
 }
 .color-music-a.note-label:after {
@@ -236,6 +246,7 @@ table.guitar-scale tr td.root-muted:before {
 }
 .color-music-a-sharp {
   background-color: #c2d734;
+  fill: #c2d734;
   color: #fff;
 }
 .color-music-a-sharp.note-label:after {
@@ -243,6 +254,7 @@ table.guitar-scale tr td.root-muted:before {
 }
 .color-music-b {
   background-color: #58a645;
+  fill: #58a645;
   color: #fff;
 }
 .color-music-b.note-label:after {
@@ -269,4 +281,70 @@ table.guitar-scale tr td.root-muted:before {
   position: relative;
   top: -1px;
   left: 35px;
+}
+.c-major-triad .color-music-c-sharp,
+.c-major-triad .color-music-d,
+.c-major-triad .color-music-d-sharp,
+.c-major-triad .color-music-f,
+.c-major-triad .color-music-f-sharp,
+.c-major-triad .color-music-g-sharp,
+.c-major-triad .color-music-a,
+.c-major-triad .color-music-a-sharp,
+.c-major-triad .color-music-b {
+  background-color: #444954;
+}
+.d-major-triad .color-music-c,
+.d-major-triad .color-music-c-sharp,
+.d-major-triad .color-music-d-sharp,
+.d-major-triad .color-music-e,
+.d-major-triad .color-music-f,
+.d-major-triad .color-music-g,
+.d-major-triad .color-music-g-sharp,
+.d-major-triad .color-music-a-sharp,
+.d-major-triad .color-music-b {
+  background-color: #444954;
+}
+.e-major-triad .color-music-c,
+.e-major-triad .color-music-c-sharp,
+.e-major-triad .color-music-d,
+.e-major-triad .color-music-d-sharp,
+.e-major-triad .color-music-f,
+.e-major-triad .color-music-f-sharp,
+.e-major-triad .color-music-g,
+.e-major-triad .color-music-a,
+.e-major-triad .color-music-a-sharp {
+  background-color: #444954;
+}
+.f-major-triad .color-music-c-sharp,
+.f-major-triad .color-music-d,
+.f-major-triad .color-music-d-sharp,
+.f-major-triad .color-music-e,
+.f-major-triad .color-music-f-sharp,
+.f-major-triad .color-music-g,
+.f-major-triad .color-music-g-sharp,
+.f-major-triad .color-music-a-sharp,
+.f-major-triad .color-music-b {
+  background-color: #444954;
+}
+.g-major-triad .color-music-c,
+.g-major-triad .color-music-c-sharp,
+.g-major-triad .color-music-d-sharp,
+.g-major-triad .color-music-e,
+.g-major-triad .color-music-f,
+.g-major-triad .color-music-f-sharp,
+.g-major-triad .color-music-g-sharp,
+.g-major-triad .color-music-a,
+.g-major-triad .color-music-a-sharp {
+  background-color: #444954;
+}
+.a-major-triad .color-music-c,
+.a-major-triad .color-music-d,
+.a-major-triad .color-music-d-sharp,
+.a-major-triad .color-music-f,
+.a-major-triad .color-music-f-sharp,
+.a-major-triad .color-music-g,
+.a-major-triad .color-music-g-sharp,
+.a-major-triad .color-music-a-sharp,
+.a-major-triad .color-music-b {
+  background-color: #444954;
 }
